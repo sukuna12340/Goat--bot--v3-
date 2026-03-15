@@ -1,0 +1,63 @@
+# Configuration Replit pour MASTERBOT V3
+language = "nodejs"
+
+# Commande de démarrage principale
+run = "npm start"
+
+# Configuration de l'environnement
+[nix]
+channel = "stable-22_11"
+
+# Modules supplémentaires (paquets système)
+[packager]
+language = "nodejs"
+[packager.features]
+packageSearch = true
+guessImports = true
+enabledForHosting = false
+
+# Configuration du serveur web (pour le dashboard)
+[[ports]]
+localPort = 3000
+externalPort = 3000
+host = "0.0.0.0"
+
+# Configuration du débogage
+[debugger]
+support = true
+
+# Fichiers à garder ouverts dans l'éditeur
+[[files]]
+name = "index.js"
+path = "index.js"
+[[files]]
+name = ".env"
+path = ".env"
+[[files]]
+name = "config.dev.json"
+path = "config.dev.json"
+[[files]]
+name = "account.dev.txt"
+path = "account.dev.txt"
+[[files]]
+name = "madara.js"
+path = "madara.js"
+
+# Unit tests (si tu veux en ajouter)
+[unitTest]
+language = "nodejs"
+
+# Interpréteur pour les commandes
+[interpreter]
+command = ["node", "index.js"]
+
+# Configuration du tableau de bord Replit
+[languages]
+[languages.nodejs]
+pattern = "**/*.{js,jsx,ts,tsx,mjs,cjs}"
+
+[languages.json]
+pattern = "**/*.json"
+
+[languages.markdown]
+pattern = "**/*.md"
