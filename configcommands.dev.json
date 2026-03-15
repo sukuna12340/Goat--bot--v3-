@@ -1,0 +1,495 @@
+{
+  "👑 MASTERBOT V3": {
+    "version": "3.0.0",
+    "description": "Configuration des commandes et événements",
+    "lastUpdate": "Mars 2026"
+  },
+
+  "🚫 COMMANDES BANNIES": {
+    "commandBanned": {},
+    "globalBannedCommands": [],
+    "userBannedCommands": {},
+    "threadBannedCommands": {},
+    "notes": "Format: { 'userId/threadId': ['cmd1', 'cmd2'] }"
+  },
+
+  "🌍 VARIABLES GLOBALES": {
+    "envGlobal": {
+      "weatherApiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4",
+      "openaiApiKey": "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",
+      "goatbotApikey": "",
+      "masterbotApiKey": "MB3-KEY-2026",
+      "youtubeApiKey": "",
+      "spotifyClientId": "",
+      "spotifyClientSecret": "",
+      "googleDriveApiKey": "",
+      "unsplashAccessKey": "",
+      "githubToken": "",
+      "databaseEncryptionKey": "",
+      "jwtSecret": "masterbot-secret-2026",
+      "notes": "Clés API globales utilisées par toutes les commandes"
+    }
+  },
+
+  "📝 COMMANDES SPÉCIFIQUES": {
+    "envCommands": {
+      "🤖 INTELLIGENCE ARTIFICIELLE": {
+        "ai": {
+          "model": "gpt-4",
+          "temperature": 0.8,
+          "maxTokens": 500,
+          "topP": 0.9,
+          "frequencyPenalty": 0.5,
+          "presencePenalty": 0.6,
+          "systemPrompt": "Tu es MASTERBOT, un assistant puissant et amical.",
+          "maxHistory": 50,
+          "enableStreaming": false
+        },
+        "imagine": {
+          "model": "dall-e-3",
+          "size": "1024x1024",
+          "quality": "standard",
+          "maxPerDay": 10,
+          "maxPerUser": 3,
+          "saveLocally": true,
+          "outputPath": "./uploads/images"
+        },
+        "analyze": {
+          "enabled": true,
+          "visionModel": "gpt-4-vision-preview",
+          "maxTokens": 300
+        },
+        "voice": {
+          "enabled": true,
+          "model": "tts-1",
+          "voice": "alloy",
+          "responseFormat": "mp3"
+        }
+      },
+
+      "💰 ÉCONOMIE & RÉCOMPENSES": {
+        "daily": {
+          "rewardDay1": {
+            "coin": 100,
+            "exp": 10,
+            "items": []
+          },
+          "rewardDay2": {
+            "coin": 150,
+            "exp": 15,
+            "items": []
+          },
+          "rewardDay3": {
+            "coin": 200,
+            "exp": 20,
+            "items": ["lucky_box"]
+          },
+          "rewardDay4": {
+            "coin": 250,
+            "exp": 25,
+            "items": []
+          },
+          "rewardDay5": {
+            "coin": 300,
+            "exp": 30,
+            "items": ["special_badge"]
+          },
+          "rewardDay6": {
+            "coin": 350,
+            "exp": 35,
+            "items": []
+          },
+          "rewardDay7": {
+            "coin": 500,
+            "exp": 50,
+            "items": ["legendary_box", "master_coin"]
+          },
+          "streakBonus": {
+            "7days": 100,
+            "30days": 500,
+            "365days": 5000
+          },
+          "resetTime": "00:00",
+          "timezone": "Europe/Paris"
+        },
+        "work": {
+          "minCoin": 50,
+          "maxCoin": 200,
+          "minExp": 5,
+          "maxExp": 20,
+          "cooldown": 3600,
+          "jobs": [
+            "développeur", "designer", "écrivain", "musicien", 
+            "chef", "jardinier", "streamer", "youtubeur"
+          ]
+        },
+        "gamble": {
+          "minBet": 10,
+          "maxBet": 1000,
+          "winRate": 0.45,
+          "jackpotRate": 0.01,
+          "maxMultiplier": 5
+        },
+        "transfer": {
+          "minAmount": 1,
+          "maxAmount": 10000,
+          "fee": 0.02,
+          "dailyLimit": 50000
+        }
+      },
+
+      "📢 NOTIFICATIONS": {
+        "notification": {
+          "delayPerGroup": 250,
+          "maxGroups": 100,
+          "maxMessages": 50,
+          "cooldown": 60000,
+          "allowMentions": true,
+          "allowAttachments": true
+        },
+        "sendnoti": {
+          "maxAdmins": 10,
+          "allowBroadcast": true,
+          "requireConfirmation": true
+        },
+        "callad": {
+          "maxReports": 100,
+          "cooldown": 300000,
+          "notifyAdmins": true,
+          "autoResolve": false
+        }
+      },
+
+      "📊 RANK & NIVEAU": {
+        "rank": {
+          "deltaNext": 5,
+          "baseXP": 100,
+          "formula": "linear",
+          "customFormula": "100 * (level^2)",
+          "maxLevel": 100,
+          "prestigeEnabled": true,
+          "prestigeLevels": [50, 100],
+          "prestigeBonus": 1000
+        },
+        "rankup": {
+          "deltaNext": 5,
+          "announceInGroup": true,
+          "announceInPrivate": false,
+          "customMessages": {
+            "default": "🎉 Félicitations à {name} qui passe au niveau {level} !",
+            "10": "🌟 {name} atteint le niveau 10 ! Continue comme ça !",
+            "50": "👑 {name} est maintenant niveau 50 - Un vrai MASTER !",
+            "100": "💎 LÉGENDAIRE ! {name} est niveau 100 !"
+          },
+          "rewards": {
+            "5": { "coin": 500, "items": ["booster"] },
+            "10": { "coin": 1000, "items": ["badge_bronze"] },
+            "25": { "coin": 2500, "items": ["badge_argent"] },
+            "50": { "coin": 5000, "items": ["badge_or"] },
+            "75": { "coin": 7500, "items": ["badge_platine"] },
+            "100": { "coin": 10000, "items": ["badge_diamant", "master_crown"] }
+          }
+        },
+        "leaderboard": {
+          "maxResults": 50,
+          "cacheTime": 300000,
+          "categories": ["level", "exp", "messages", "commands", "coins"]
+        }
+      },
+
+      "🛠️ UTILITAIRES": {
+        "appstore": {
+          "limitResult": 3,
+          "country": "fr",
+          "language": "fr"
+        },
+        "weather": {
+          "apiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4",
+          "units": "metric",
+          "language": "fr",
+          "maxResults": 5
+        },
+        "translate": {
+          "defaultTarget": "fr",
+          "defaultSource": "auto",
+          "maxLength": 5000,
+          "provider": "google"
+        },
+        "ytb": {
+          "maxResults": 5,
+          "maxDuration": 600,
+          "downloadPath": "./downloads",
+          "audioQuality": "highest"
+        },
+        "google": {
+          "maxResults": 5,
+          "safeSearch": true,
+          "country": "fr"
+        },
+        "shortcut": {
+          "maxPerUser": 50,
+          "maxPerGroup": 200,
+          "allowGlobal": true
+        },
+        "todo": {
+          "maxPerUser": 100,
+          "maxPerGroup": 200,
+          "allowReminders": true
+        },
+        "reminder": {
+          "maxPerUser": 20,
+          "maxDuration": 2592000,
+          "checkInterval": 60000
+        }
+      },
+
+      "🎮 JEUX & DIVERTISSEMENT": {
+        "guessnumber": {
+          "min": 1,
+          "max": 100,
+          "maxAttempts": 10,
+          "reward": {
+            "win": 500,
+            "loss": 0
+          }
+        },
+        "dhbc": {
+          "difficultyLevels": ["easy", "medium", "hard"],
+          "timeLimit": 30,
+          "reward": {
+            "easy": 200,
+            "medium": 500,
+            "hard": 1000
+          }
+        },
+        "quiz": {
+          "categories": ["general", "science", "history", "sport", "music", "cinema"],
+          "timeLimit": 20,
+          "questionsPerGame": 5,
+          "reward": {
+            "perfect": 1000,
+            "good": 500,
+            "average": 200
+          }
+        },
+        "rps": {
+          "betEnabled": true,
+          "maxBet": 1000
+        },
+        "slot": {
+          "minBet": 10,
+          "maxBet": 500,
+          "winMultipliers": {
+            "777": 10,
+            "BAR": 3,
+            "CHERRY": 2
+          }
+        },
+        "battle": {
+          "enabled": true,
+          "minBet": 50,
+          "maxBet": 5000,
+          "maxPlayers": 10,
+          "timeout": 60
+        }
+      },
+
+      "⚙️ ADMINISTRATION": {
+        "ban": {
+          "maxWarns": 3,
+          "banDuration": 604800000,
+          "autoUnban": true,
+          "logChannel": true
+        },
+        "warn": {
+          "maxWarns": 3,
+          "actions": {
+            "1": "avertissement",
+            "2": "avertissement + mute 1h",
+            "3": "ban temporaire"
+          }
+        },
+        "filteruser": {
+          "autoKick": true,
+          "autoBan": false,
+          "minAge": 0,
+          "maxAge": 100
+        },
+        "antispam": {
+          "enabled": true,
+          "maxMessages": 10,
+          "timeWindow": 5000,
+          "action": "warn"
+        },
+        "automod": {
+          "enabled": false,
+          "badWords": [],
+          "blockLinks": false,
+          "blockInvites": true
+        }
+      },
+
+      "🎨 PERSONNALISATION": {
+        "setname": {
+          "maxLength": 50,
+          "allowEmoji": true,
+          "allowSpecialChars": false
+        },
+        "setavatar": {
+          "maxSize": 5242880,
+          "allowedFormats": ["jpg", "png", "gif"]
+        },
+        "setwelcome": {
+          "maxLength": 1000,
+          "allowAttachments": true,
+          "allowVariables": true
+        },
+        "setleave": {
+          "maxLength": 1000,
+          "allowAttachments": true,
+          "allowVariables": true
+        },
+        "customrankcard": {
+          "enabled": true,
+          "maxSize": 5242880,
+          "templates": ["default", "premium", "legendary"]
+        },
+        "theme": {
+          "enabled": true,
+          "default": "dark",
+          "custom": {}
+        }
+      },
+
+      "🔧 DÉVELOPPEMENT": {
+        "eval": {
+          "allowOnlyAdmins": true,
+          "logResults": true,
+          "timeout": 10000
+        },
+        "cmd": {
+          "allowOnlyAdmins": true,
+          "maxCustomCommands": 50
+        },
+        "backupdata": {
+          "autoBackup": true,
+          "interval": 86400000,
+          "maxBackups": 10,
+          "backupPath": "./backups"
+        },
+        "update": {
+          "autoCheck": true,
+          "autoUpdate": false,
+          "checkInterval": 3600000
+        }
+      },
+
+      "📊 STATISTIQUES": {
+        "count": {
+          "trackMessages": true,
+          "trackCommands": true,
+          "trackUsers": true,
+          "trackGroups": true
+        },
+        "analytics": {
+          "enabled": true,
+          "retention": 30,
+          "exportEnabled": false
+        }
+      }
+    }
+  },
+
+  "🎯 ÉVÉNEMENTS": {
+    "envEvents": {
+      "logsbot": {
+        "allow": true,
+        "logPath": "./logs/bot",
+        "logLevel": "info",
+        "maxFiles": 10,
+        "maxSize": 10485760,
+        "events": {
+          "message": true,
+          "reaction": true,
+          "unsend": true,
+          "join": true,
+          "leave": true,
+          "nickname": true,
+          "admin": true
+        }
+      },
+      "welcome": {
+        "enabled": true,
+        "delay": 2000,
+        "autoKick": false,
+        "welcomeMessage": "Bienvenue {name} dans le groupe ! 🎉"
+      },
+      "leave": {
+        "enabled": true,
+        "leaveMessage": "{name} a quitté le groupe. Au revoir ! 👋"
+      },
+      "autosetname": {
+        "enabled": false,
+        "format": "Membre {name}"
+      },
+      "antichangeinfobox": {
+        "enabled": false,
+        "action": "revert",
+        "notifyAdmins": true
+      },
+      "badwords": {
+        "enabled": false,
+        "action": "delete",
+        "maxWarns": 3,
+        "banDuration": 3600000
+      },
+      "autoreact": {
+        "enabled": false,
+        "emojis": ["👍", "❤️", "😂", "😮", "😢", "😡"],
+        "probability": 0.1
+      }
+    }
+  },
+
+  "⚡ PERFORMANCES & CACHE": {
+    "cache": {
+      "userCacheSize": 1000,
+      "threadCacheSize": 500,
+      "commandCacheSize": 200,
+      "cacheTTL": 3600000
+    },
+    "queue": {
+      "maxConcurrent": 5,
+      "maxQueueSize": 100,
+      "timeout": 30000
+    },
+    "rateLimit": {
+      "enabled": true,
+      "maxRequests": 50,
+      "timeWindow": 60000
+    }
+  },
+
+  "🔐 SÉCURITÉ": {
+    "encryption": {
+      "enabled": false,
+      "algorithm": "aes-256-cbc",
+      "keyRotation": 604800000
+    },
+    "inputValidation": {
+      "sanitize": true,
+      "maxLength": 5000,
+      "blockScripts": true
+    },
+    "auditLog": {
+      "enabled": true,
+      "adminActions": true,
+      "userActions": false
+    }
+  },
+
+  "📋 NOTES": {
+    "notes": "Ce fichier contient la configuration de toutes les commandes et événements de MASTERBOT V3. Modifiez avec précaution.",
+    "documentation": "Voir DOCS.md pour plus de détails sur chaque paramètre"
+  }
+        }
