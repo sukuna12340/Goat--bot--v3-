@@ -1,0 +1,394 @@
+{
+  "👑 MASTERBOT V3": {
+    "version": "3.0.0",
+    "author": "MASTERBOT Team",
+    "description": "Configuration du bot ultime pour Messenger",
+    "lastUpdate": "Mars 2026"
+  },
+
+  "🔐 COMPTE FACEBOOK": {
+    "email": "",
+    "password": "",
+    "2FASecret": "",
+    "appState": "",
+    "proxy": null,
+    "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36",
+    "autoRefreshCookie": {
+      "enabled": true,
+      "interval": 1440,
+      "notes": "Intervalle en minutes (1440 = 1 jour, 4320 = 3 jours). Nécessite email/mot de passe"
+    },
+    "multipleAccounts": {
+      "enabled": false,
+      "accounts": [],
+      "rotationStrategy": "round-robin"
+    }
+  },
+
+  "🤖 CONFIGURATION DU BOT": {
+    "botName": "𝐌𝐀𝐒𝐓𝐄𝐑𝐁𝐎𝐓 𝐕𝟑",
+    "prefix": "!",
+    "language": "fr",
+    "availableLanguages": ["fr", "en", "es", "vi", "ar"],
+    "timeZone": "Europe/Paris",
+    "admins": [
+      "61573686827313"
+    ],
+    "coOwners": [],
+    "supportGroup": "https://m.me/61573686827313",
+    "website": "https://github.com/votre-nom/masterbot-v3"
+  },
+
+  "🛡️ PERMISSIONS & SÉCURITÉ": {
+    "adminOnly": {
+      "enabled": false,
+      "ignoreCommands": ["help", "ai", "ping"]
+    },
+    "whiteListUsers": {
+      "enabled": false,
+      "userIds": []
+    },
+    "whiteListThreads": {
+      "enabled": false,
+      "threadIds": []
+    },
+    "blackListUsers": {
+      "enabled": false,
+      "userIds": []
+    },
+    "blackListThreads": {
+      "enabled": false,
+      "threadIds": []
+    },
+    "antiInbox": false,
+    "antiSpam": {
+      "enabled": true,
+      "maxMessagesPerMinute": 30,
+      "maxCommandsPerMinute": 10,
+      "autoWarn": true,
+      "autoBan": false
+    },
+    "notes": "Si whiteListUsers ET whiteListThreads sont activés, l'utilisateur doit être dans l'une des deux listes"
+  },
+
+  "💾 BASE DE DONNÉES": {
+    "type": "mongodb",
+    "availableTypes": ["mongodb", "mysql", "sqlite", "json"],
+    "connection": {
+      "mongodb": {
+        "uri": "mongodb+srv://username:password@cluster.mongodb.net/masterbot",
+        "options": {
+          "retryWrites": true,
+          "w": "majority"
+        }
+      },
+      "mysql": {
+        "host": "localhost",
+        "port": 3306,
+        "username": "",
+        "password": "",
+        "database": "masterbot"
+      },
+      "sqlite": {
+        "path": "./database/data.sqlite"
+      },
+      "json": {
+        "path": "./database/data.json"
+      }
+    },
+    "autoSyncOnStart": true,
+    "autoRefreshThreads": true,
+    "autoRefreshUsers": true,
+    "backup": {
+      "enabled": true,
+      "interval": 86400000,
+      "maxBackups": 7,
+      "path": "./backups"
+    }
+  },
+
+  "🤖 INTELLIGENCE ARTIFICIELLE": {
+    "enabled": true,
+    "provider": "openai",
+    "availableProviders": ["openai", "claude", "gemini", "local"],
+    "openai": {
+      "apiKey": "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",
+      "model": "gpt-4",
+      "availableModels": ["gpt-4", "gpt-4-turbo", "gpt-3.5-turbo"],
+      "temperature": 0.8,
+      "maxTokens": 500,
+      "topP": 0.9,
+      "frequencyPenalty": 0.5,
+      "presencePenalty": 0.6
+    },
+    "imageGeneration": {
+      "enabled": true,
+      "model": "dall-e-3",
+      "size": "1024x1024",
+      "quality": "standard",
+      "maxPerDay": 10
+    },
+    "personalities": {
+      "default": "master",
+      "available": ["master", "madara", "friendly", "expert", "poet", "gandalf", "vador", "goku", "sherlock", "einstein"],
+      "custom": {}
+    },
+    "memory": {
+      "enabled": true,
+      "maxConversations": 50,
+      "maxMessagesPerUser": 20,
+      "storageType": "database"
+    },
+    "autoReply": {
+      "enabled": true,
+      "probability": 0.3,
+      "ignoreCommands": true,
+      "ignoreGroups": []
+    }
+  },
+
+  "🛡️ ANTI-BAN ULTRA": {
+    "enabled": true,
+    "messageDelay": {
+      "min": 800,
+      "max": 2500
+    },
+    "actionDelay": {
+      "min": 1500,
+      "max": 4000
+    },
+    "stealthMode": true,
+    "autoRepair": true,
+    "randomizeActions": true,
+    "humanLikeBehavior": {
+      "enabled": true,
+      "typingDelay": true,
+      "readReceipts": false,
+      "randomReactions": false
+    },
+    "accountRotation": {
+      "enabled": false,
+      "interval": 3600000,
+      "strategy": "leastUsed"
+    },
+    "maxActionsPerMinute": 15,
+    "maxMessagesPerMinute": 25,
+    "cooldownMultiplier": {
+      "groups": 1.0,
+      "private": 0.7,
+      "admins": 0.3
+    }
+  },
+
+  "📊 DASHBOARD": {
+    "enabled": true,
+    "port": 3000,
+    "host": "0.0.0.0",
+    "title": "MASTERBOT Command Center",
+    "theme": "dark",
+    "availableThemes": ["dark", "light", "purple", "cyberpunk"],
+    "authentication": {
+      "enabled": true,
+      "sessionTimeout": 3600,
+      "maxLoginAttempts": 5,
+      "lockoutTime": 900000
+    },
+    "rateLimit": {
+      "enabled": true,
+      "windowMs": 900000,
+      "maxRequests": 100
+    },
+    "features": {
+      "statistics": true,
+      "commandEditor": true,
+      "userManager": true,
+      "groupManager": true,
+      "logs": true,
+      "aiTraining": false
+    },
+    "expireVerifyCode": 300000
+  },
+
+  "⏰ AUTO RESTART & UPTIME": {
+    "autoRestart": {
+      "enabled": true,
+      "time": 18000000,
+      "cron": null,
+      "notes": "Time en millisecondes ou expression cron. 18000000 = 5h"
+    },
+    "autoUptime": {
+      "enabled": false,
+      "interval": 180,
+      "url": "",
+      "notes": "Intervalle en secondes. Utile pour Replit/Glitch"
+    },
+    "keepAlive": {
+      "enabled": true,
+      "service": "uptimerobot",
+      "pingInterval": 300
+    }
+  },
+
+  "📧 NOTIFICATIONS & ALERTES": {
+    "onStart": {
+      "enabled": true,
+      "message": "✅ MASTERBOT V3 est maintenant en ligne !"
+    },
+    "onError": {
+      "enabled": true,
+      "channels": ["console", "gmail", "telegram"]
+    },
+    "onListenError": {
+      "enabled": true,
+      "gmail": {
+        "enabled": false,
+        "recipients": []
+      },
+      "telegram": {
+        "enabled": false,
+        "botToken": "",
+        "chatIds": []
+      },
+      "discord": {
+        "enabled": false,
+        "webhookUrls": []
+      }
+    }
+  },
+
+  "🔧 SERVICES EXTERNES": {
+    "google": {
+      "gmail": {
+        "email": "votre.email@gmail.com",
+        "clientId": "votre-client-id.apps.googleusercontent.com",
+        "clientSecret": "votre-client-secret",
+        "refreshToken": "votre-refresh-token",
+        "apiKey": ""
+      },
+      "drive": {
+        "enabled": true,
+        "backupFolder": "MasterBotBackups"
+      },
+      "recaptcha": {
+        "siteKey": "votre-site-key",
+        "secretKey": "votre-secret-key"
+      }
+    },
+    "weather": {
+      "enabled": true,
+      "apiKey": "",
+      "provider": "openweathermap"
+    },
+    "youtube": {
+      "enabled": true,
+      "apiKey": ""
+    },
+    "spotify": {
+      "enabled": false,
+      "clientId": "",
+      "clientSecret": ""
+    },
+    "unsplash": {
+      "enabled": false,
+      "accessKey": ""
+    }
+  },
+
+  "📝 COMMANDES": {
+    "defaultCooldown": 3,
+    "maxCooldown": 60,
+    "ignoreCooldownAdmins": true,
+    "commandBanned": [],
+    "autoLoadScripts": {
+      "enabled": true,
+      "ignoreCommands": [],
+      "ignoreEvents": []
+    },
+    "categories": {
+      "ia": "🤖 Intelligence Artificielle",
+      "fun": "🎮 Fun & Divertissement",
+      "utile": "🛠️ Utilitaires",
+      "admin": "👑 Administration",
+      "moderation": "🛡️ Modération",
+      "games": "🎲 Jeux",
+      "media": "📸 Média"
+    }
+  },
+
+  "🎨 PERSONNALISATION": {
+    "botAvatar": "https://i.ibb.co/Jwtyz83V/image.jpg",
+    "botBanner": "https://i.ibb.co/Jwtyz83V/image.jpg",
+    "nicknameFormat": "𝐌𝐀𝐒𝐓𝐄𝐑𝐁𝐎𝐓",
+    "autoChangeNickname": false,
+    "messageStyle": {
+      "prefixEmoji": "👑",
+      "separator": " | ",
+      "showTime": true,
+      "timeFormat": "HH:mm"
+    },
+    "themes": {
+      "default": "dark",
+      "customCSS": ""
+    }
+  },
+
+  "📊 LOGS & DEBUG": {
+    "debug": false,
+    "logLevel": "info",
+    "availableLevels": ["error", "warn", "info", "debug", "trace"],
+    "logToFile": {
+      "enabled": true,
+      "path": "./logs",
+      "maxFiles": 7,
+      "maxSize": 10485760
+    },
+    "hideNotifications": {
+      "commandNotFound": false,
+      "adminOnly": false,
+      "userBanned": false,
+      "threadBanned": false,
+      "cooldown": false
+    },
+    "logEvents": {
+      "disableAll": false,
+      "message": true,
+      "message_reaction": true,
+      "message_unsend": true,
+      "message_reply": true,
+      "event": true,
+      "read_receipt": false,
+      "typ": false,
+      "presence": false
+    }
+  },
+
+  "⚙️ OPTIONS FCA (Facebook Chat API)": {
+    "forceLogin": true,
+    "listenEvents": true,
+    "updatePresence": true,
+    "listenTyping": true,
+    "logLevel": "error",
+    "selfListen": false,
+    "selfListenEvent": true,
+    "autoMarkDelivery": false,
+    "autoMarkRead": false,
+    "autoReconnect": true,
+    "online": true,
+    "emitReady": false,
+    "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36"
+  },
+
+  "🚀 PERFORMANCES": {
+    "maxConcurrentCommands": 5,
+    "commandQueue": {
+      "enabled": true,
+      "maxSize": 100
+    },
+    "cacheSize": {
+      "users": 1000,
+      "threads": 500,
+      "commands": 200
+    },
+    "gcInterval": 3600000
+  }
+}
