@@ -1,0 +1,418 @@
+[
+	{
+		"version": "1.0.0",
+		"date": "2024-01-15",
+		"name": "Initial Release",
+		"files": {
+			"index.js": "Initial commit",
+			"package.json": "Initial dependencies",
+			"README.md": "Documentation de base"
+		}
+	},
+	{
+		"version": "1.0.1",
+		"date": "2024-01-20",
+		"name": "Bug Fixes",
+		"files": {
+			"bot/login/login.js": "Fixes terminal freeze",
+			"bot/login/loadData.js": "Optimisation chargement"
+		}
+	},
+	{
+		"version": "1.0.2",
+		"date": "2024-01-25",
+		"name": "Core Improvements",
+		"files": {
+			"bot/handler/handlerEvents.js": "Optimisation événements"
+		}
+	},
+	{
+		"version": "1.0.3",
+		"date": "2024-02-01",
+		"name": "Command Updates",
+		"files": {
+			"scripts/cmds/badwords.js": "Fix undefined settings",
+			"scripts/cmds/loadconfig.js": "Fix dirConfig error",
+			"scripts/cmds/tik.js": "API TikTok mise à jour"
+		}
+	},
+	{
+		"version": "1.0.4",
+		"date": "2024-02-10",
+		"name": "Performance",
+		"files": {
+			"bot/login/login.js": "Fix login duplication"
+		}
+	},
+	{
+		"version": "1.0.5",
+		"date": "2024-02-15",
+		"name": "YouTube Fix",
+		"files": {
+			"scripts/cmds/ytb.js": "Fix certificate error"
+		}
+	},
+	{
+		"version": "1.0.6",
+		"date": "2024-02-20",
+		"name": "Video Download",
+		"files": {
+			"scripts/cmds/videofb.js": "Fix video download"
+		}
+	},
+	{
+		"version": "1.0.7",
+		"date": "2024-03-01",
+		"name": "Translation System",
+		"files": {
+			"utils.js": "Update translate system",
+			"scripts/cmds/adduser.js": "Multi-langue support"
+		}
+	},
+	{
+		"version": "1.0.8",
+		"date": "2024-03-10",
+		"name": "TikTok Slides",
+		"files": {
+			"scripts/cmds/tik.js": "Add slide download feature"
+		}
+	},
+	{
+		"version": "1.0.9",
+		"date": "2024-03-15",
+		"name": "New Commands",
+		"files": {
+			"scripts/cmds/simsimi.js": "New AI chat command",
+			"scripts/cmds/anime.js": "Random anime images",
+			"scripts/cmds/avatar.js": "Create anime avatar"
+		}
+	},
+	{
+		"version": "1.0.10",
+		"date": "2024-03-20",
+		"name": "Bug Fixes",
+		"files": {
+			"scripts/cmds/anime.js": "Fix attachment error"
+		}
+	},
+	{
+		"version": "1.0.11",
+		"date": "2024-04-01",
+		"name": "Admin System",
+		"files": {
+			"bot/handler/handlerEvents.js": "Fix adminOnly",
+			"scripts/cmds/cmd.js": "Add install from URL",
+			"scripts/cmds/event.js": "Add install from URL",
+			"scripts/cmds/admin.js": "New admin management"
+		}
+	},
+	{
+		"version": "1.0.12",
+		"date": "2024-04-10",
+		"name": "Stability",
+		"files": {
+			"bot/login/login.js": "Remove duplicate listeners",
+			"index.js": "Add update notification"
+		}
+	},
+	{
+		"version": "1.0.13",
+		"date": "2024-04-15",
+		"name": "MongoDB Fix",
+		"files": {
+			"database/connectDB/connectMongoDB.js": "Fix connection",
+			"database/controller/*.js": "Database optimization",
+			"utils.js": "Error reporting update"
+		}
+	},
+	{
+		"version": "1.0.14",
+		"date": "2024-04-20",
+		"name": "API Key Fix",
+		"files": {
+			"utils.js": "Fix API key error"
+		}
+	},
+	{
+		"version": "1.0.15",
+		"date": "2024-05-01",
+		"name": "New Utilities",
+		"files": {
+			"scripts/cmds/busy.js": "New busy mode",
+			"scripts/cmds/filteruser.js": "User filter",
+			"scripts/cmds/refresh.js": "Refresh data"
+		}
+	},
+	{
+		"version": "1.0.16",
+		"date": "2024-05-10",
+		"name": "Customization",
+		"files": {
+			"scripts/cmds/setleave.js": "Custom leave message",
+			"scripts/cmds/setwelcome.js": "Custom welcome message",
+			"scripts/cmds/shortcut.js": "Fix bugs"
+		}
+	},
+	{
+		"version": "1.0.17",
+		"date": "2024-05-15",
+		"name": "Dashboard Update",
+		"files": {
+			"dashboard/views/*.eta": "Fix dashboard bugs",
+			"languages/*.lang": "Add language support",
+			"database/models/mongodb/*.js": "Fix MongoDB"
+		}
+	},
+	{
+		"version": "1.0.18",
+		"date": "2024-06-01",
+		"name": "Global Data",
+		"files": {
+			"database/controller/globalData.js": "Add global data",
+			"database/models/global.js": "Global model",
+			"scripts/cmds/eval.js": "Add global access",
+			"updater.js": "Update system"
+		}
+	},
+	{
+		"version": "1.0.19",
+		"date": "2024-06-10",
+		"name": "Alias System",
+		"files": {
+			"scripts/cmds/setalias.js": "Add global aliases"
+		}
+	},
+	{
+		"version": "1.0.20",
+		"date": "2024-06-15",
+		"name": "Console Fix",
+		"files": {
+			"bot/login/login.js": "Fix console freeze"
+		}
+	},
+	{
+		"version": "1.0.21",
+		"date": "2024-07-01",
+		"name": "Notification Fix",
+		"files": {
+			"scripts/cmds/notification.js": "Fix 404 error"
+		},
+		"deleteFiles": {
+			"scripts/cmds/instagram.js": "API discontinued"
+		}
+	},
+	{
+		"version": "1.0.22",
+		"date": "2024-07-10",
+		"name": "Package Update",
+		"files": {
+			"package.json": "Update fb-chat-api",
+			"scripts/cmds/ytb.js": "No API key needed"
+		}
+	},
+	{
+		"version": "1.0.23",
+		"date": "2024-07-15",
+		"name": "YouTube Fix",
+		"files": {
+			"scripts/cmds/ytb.js": "Fix undefined length"
+		}
+	},
+	{
+		"version": "1.1.0",
+		"date": "2024-08-01",
+		"name": "Major Update - Multi-language",
+		"files": {
+			"languages/cmds/en.js": "Command translations",
+			"languages/events/en.js": "Event translations",
+			"scripts/cmds/*.js": "Add language support to all commands",
+			"scripts/events/*.js": "Add language support to all events",
+			"database/controller/usersData.js": "Add money functions"
+		},
+		"reinstallDependencies": true
+	},
+	{
+		"version": "1.1.1",
+		"date": "2024-08-10",
+		"name": "Language Fixes",
+		"files": {
+			"scripts/cmds/help.js": "Fix language error",
+			"scripts/events/*.js": "Add languages"
+		}
+	},
+	{
+		"version": "1.1.2",
+		"date": "2024-08-15",
+		"name": "Language Updates",
+		"files": {
+			"languages/cmds/en.js": "Update translations",
+			"scripts/cmds/help.js": "Language update"
+		}
+	},
+	{
+		"version": "1.1.3",
+		"date": "2024-09-01",
+		"name": "Bug Fixes",
+		"files": {
+			"bot/handler/handlerEvents.js": "Fix inbox issue",
+			"scripts/events/logsbot.js": "Fix translate error",
+			"database/controller/*.js": "Fix bugs"
+		}
+	},
+	{
+		"version": "1.1.4",
+		"date": "2024-09-10",
+		"name": "Daily Rewards",
+		"files": {
+			"scripts/cmds/daily.js": "New daily command",
+			"scripts/cmds/busy.js": "Language update"
+		}
+	},
+	{
+		"version": "1.1.5",
+		"date": "2024-09-15",
+		"name": "Command Fixes",
+		"files": {
+			"scripts/cmds/busy.js": "Fix auto-activation",
+			"scripts/cmds/notification.js": "Fix translate error"
+		}
+	},
+	{
+		"version": "1.1.6",
+		"date": "2024-10-01",
+		"name": "Rankup Custom",
+		"files": {
+			"scripts/cmds/rankup.js": "Custom messages",
+			"scripts/cmds/setrankup.js": "New command",
+			"bot/source/*.jpg": "Guide images"
+		}
+	},
+	{
+		"version": "1.1.7",
+		"date": "2024-10-10",
+		"name": "Admin Updates",
+		"files": {
+			"scripts/cmds/admin.js": "Language update",
+			"scripts/cmds/setrole.js": "Language update"
+		}
+	},
+	{
+		"version": "1.1.8",
+		"date": "2024-10-15",
+		"name": "Shortcut Fix",
+		"files": {
+			"scripts/cmds/shortcut.js": "Fix attachment error"
+		}
+	},
+	{
+		"version": "1.1.9",
+		"date": "2024-11-01",
+		"name": "Rankup Fix",
+		"files": {
+			"scripts/cmds/rankup.js": "Fix undefined attachments"
+		}
+	},
+	{
+		"version": "1.1.10",
+		"date": "2024-11-10",
+		"name": "Alias Fix",
+		"files": {
+			"scripts/cmds/setalias.js": "Fix bugs"
+		}
+	},
+	{
+		"version": "1.1.11",
+		"date": "2024-11-15",
+		"name": "Remove Command",
+		"files": {
+			"scripts/cmds/setrole.js": "Language update"
+		},
+		"deleteFiles": {
+			"scripts/cmds/simsimi.js": "Command removed"
+		}
+	},
+	{
+		"version": "1.1.12",
+		"date": "2024-12-01",
+		"name": "Hubble & Translate",
+		"files": {
+			"scripts/cmds/hubble.js": "New telescope images",
+			"scripts/cmds/translate.js": "New translate command"
+		}
+	},
+	{
+		"version": "1.1.13",
+		"date": "2024-12-10",
+		"name": "Reaction Translate",
+		"files": {
+			"scripts/cmds/translate.js": "Translate by reaction"
+		}
+	},
+	{
+		"version": "1.1.14",
+		"date": "2024-12-15",
+		"name": "Rank Card",
+		"files": {
+			"scripts/cmds/rank.js": "Remove API dependency"
+		}
+	},
+	{
+		"version": "1.1.15",
+		"date": "2025-01-01",
+		"name": "Hubble Update",
+		"files": {
+			"scripts/cmds/hubble.js": "Update data URL"
+		}
+	},
+	{
+		"version": "1.1.16",
+		"date": "2025-01-10",
+		"name": "Database Fix",
+		"files": {
+			"database/controller/index.js": "Fix bugs",
+			"config.json": "Add database options"
+		}
+	},
+	{
+		"version": "2.0.0",
+		"date": "2025-02-01",
+		"name": "RavenBot - Major Evolution",
+		"files": {
+			"README.md": "RavenBot branding",
+			"madara.js": "Madara AI integration",
+			"config.dev.json": "New config structure"
+		}
+	},
+	{
+		"version": "2.0.1",
+		"date": "2025-02-10",
+		"name": "Madara AI Fixes",
+		"files": {
+			"madara.js": "Improve AI responses"
+		}
+	},
+	{
+		"version": "3.0.0",
+		"date": "2026-03-15",
+		"name": "MASTERBOT V3 - ULTIMATE",
+		"files": {
+			"index.js": "Complete rewrite with AI",
+			"package.json": "New dependencies (OpenAI, etc)",
+			"config.dev.json": "MasterBot structure",
+			"config.dev.cmd": "Advanced command config",
+			".env": "Environment variables",
+			".eslintrc.json": "Strict linting",
+			".gitignore": "Enhanced security",
+			".replit": "Replit config",
+			"CHANGELOG.md": "Full history",
+			"DOCS.md": "Complete documentation",
+			"STEP_INSTALL.md": "Installation guide",
+			"Goat.js": "MasterBot core",
+			"restoreBackup.js": "Advanced backup restore",
+			"update.js": "Smart update system",
+			"adapter.js": "Update adapter",
+			"versions.json": "This file"
+		},
+		"reinstallDependencies": true
+	}
+      ]
