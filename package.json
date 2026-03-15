@@ -1,0 +1,154 @@
+{
+	"name": "masterbot-v3",
+	"version": "3.0.0",
+	"description": "👑 MASTERBOT V3 - L'ultime bot Messenger avec IA, anti-ban et dashboard moderne. Basé sur GoatBot mais complètement amélioré.",
+	"main": "index.js",
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=9.0.0"
+	},
+	"dependencies": {
+		"@distube/ytdl-core": "^4.15.0",
+		"axios": "^1.7.9",
+		"bcryptjs": "^2.4.3",
+		"canvas": "^2.11.2",
+		"chalk": "^4.1.2",
+		"cheerio": "^1.0.0",
+		"compression": "^1.7.5",
+		"connect-flash": "^0.1.1",
+		"cookie-parser": "^1.4.7",
+		"cron": "^3.1.7",
+		"dotenv": "^16.4.7",
+		"eta": "^3.5.0",
+		"express": "^4.21.2",
+		"express-fileupload": "^1.5.1",
+		"express-rate-limit": "^7.4.1",
+		"express-session": "^1.18.1",
+		"fast-xml-parser": "^4.5.0",
+		"figlet": "^1.8.0",
+		"form-data": "^4.0.1",
+		"fs-extra": "^11.2.0",
+		"googleapis": "^140.0.1",
+		"gradient-string": "^2.0.2",
+		"helmet": "^8.0.0",
+		"jsonwebtoken": "^9.0.2",
+		"moment": "^2.30.1",
+		"moment-timezone": "^0.5.46",
+		"mongoose": "^8.9.5",
+		"mqtt": "^5.10.1",
+		"multer": "^1.4.5-lts.1",
+		"node-cron": "^3.0.3",
+		"node-fetch": "^2.7.0",
+		"nodemailer": "^6.9.16",
+		"openai": "^4.77.0",
+		"pm2": "^5.4.2",
+		"qrcode": "^1.5.4",
+		"qs": "^6.13.1",
+		"sharp": "^0.33.5",
+		"socket.io": "^4.8.1",
+		"sqlite3": "^5.1.7",
+		"tinyurl": "^1.1.7",
+		"totp-generator": "^1.0.0",
+		"winston": "^3.17.0",
+		"youtube-dl-exec": "^3.0.12"
+	},
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js",
+		"prod": "NODE_ENV=production node index.js",
+		"dashboard": "cd dashboard && npm start",
+		"build": "npm install && cd dashboard && npm install && npm run build",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"test": "jest",
+		"deploy": "pm2 start index.js --name masterbot",
+		"stop": "pm2 stop masterbot",
+		"restart": "pm2 restart masterbot",
+		"logs": "pm2 logs masterbot",
+		"update": "git pull && npm install",
+		"backup": "node scripts/backup.js"
+	},
+	"author": "MASTERBOT Team",
+	"contributors": [
+		{
+			"name": "NTKhang",
+			"url": "https://github.com/ntkhang03",
+			"contribution": "Créateur original de GoatBot"
+		},
+		{
+			"name": "Charbel1445",
+			"url": "https://github.com/Charbel1445",
+			"contribution": "RavenBot"
+		},
+		{
+			"name": "Amado Shirogane",
+			"url": "https://m.me/61573686827313",
+			"contribution": "Madara AI"
+		}
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/votre-nom/masterbot-v3.git"
+	},
+	"keywords": [
+		"facebook-bot",
+		"messenger-bot",
+		"chatbot",
+		"ai-bot",
+		"masterbot",
+		"goatbot",
+		"ravenbot",
+		"madara-ai",
+		"gpt-4",
+		"openai",
+		"dalle-3",
+		"anti-ban",
+		"dashboard",
+		"react"
+	],
+	"bugs": {
+		"url": "https://github.com/votre-nom/masterbot-v3/issues"
+	},
+	"homepage": "https://github.com/votre-nom/masterbot-v3#readme",
+	"devDependencies": {
+		"eslint": "^8.57.1",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^7.2.1",
+		"eslint-plugin-security": "^3.0.1",
+		"jest": "^29.7.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.4.2"
+	},
+	"config": {
+		"openai": {
+			"apiKey": "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",
+			"model": "gpt-4",
+			"temperature": 0.8
+		},
+		"weather": {
+			"apiKey": "d7e795ae6a0d44aaa8abb1a0a7ac19e4"
+		},
+		"google": {
+			"gmail": {
+				"email": "sahulrimin@gmail.com",
+				"clientId": "24605262819-7no89dr93lchm0nsnffte6k1girvf254.apps.googleusercontent.com",
+				"clientSecret": "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",
+				"refreshToken": "1//04jo0gL7IHPjJCgYIARAAGAQSNwF-L9IrkbtrhwYvh7OIPCnnbjaX0MGtDJre7DP8-A35eNn1LthF4-VEVT47RPXY9llD0GpQpvU"
+			},
+			"recaptcha": {
+				"siteKey": "6LflC2IpAAAAAH0OS-zr79ovyoV3VQPDhwKbrN3H",
+				"secretKey": "6LflC2IpAAAAAM4JOsRl4ZdKZ0ihowTLDfvBe_W4"
+			}
+		},
+		"admins": [
+			"61578718657900",
+			"100084918384589"
+		],
+		"prefix": "$",
+		"botName": "𝐌𝐀𝐒𝐓𝐄𝐑𝐁𝐎𝐓 𝐕𝟑"
+	},
+	"private": true,
+	"type": "commonjs"
+    }
