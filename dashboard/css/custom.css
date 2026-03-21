@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+/* ============================================ */
+/* MASTERBOT V3 - STYLES PERSONNALISÉS         */
+/* Dashboard moderne et épuré                  */
+/* ============================================ */
+
+/* ======= TOAST NOTIFICATIONS ======== */
+#toast {
+	position: fixed;
+	top: 32px;
+	right: 32px;
+	z-index: 999999;
+}
+
+.toast:not(.show) {
+	display: flex;
+}
+
+.toast+.toast {
+	margin-top: 24px;
+}
+
+.toast {
+	border-radius: 12px;
+	background: var(--phoenix-white, #fff);
+	padding: 20px 35px 20px 25px;
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+	animation: slideInLeft 0.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(calc(100% + 32px));
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
+}
+
+.toast .toast-content {
+	display: flex;
+	align-items: center;
+}
+
+.toast-content .check {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 35px;
+	min-width: 35px;
+	background-color: #ff69b4;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 50%;
+}
+
+.toast-content .message {
+	display: flex;
+	flex-direction: column;
+	margin: 0 20px;
+}
+
+.message .text {
+	font-size: 16px;
+	font-weight: 400;
+	color: #666666;
+}
+
+.message .text.text-1 {
+	font-weight: 600;
+	color: #333;
+}
+
+.toast .close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	padding: 5px;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.toast .close:hover {
+	opacity: 1;
+}
+
+.toast .progress {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+}
+
+.toast .warning,
+.toast .error,
+.toast .success,
+.toast .info {
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.toast .warning {
+	color: #ff9f43;
+}
+
+.toast .error {
+	color: #ff5b5b;
+}
+
+.toast .success {
+	color: #00d68f;
+}
+
+.toast .info {
+	color: #ff69b4;
+}
+
+.toast .progress:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 105, 180, 0.3);
+	animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+	100% {
+		right: 100%;
+	}
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+	.toast {
+		padding: 14px 16px;
+	}
+	#toast {
+		top: 12px;
+		right: 10px;
+	}
+	.message .text {
+		font-size: 14px;
+	}
+	.toast .warning,
+	.toast .error,
+	.toast .success,
+	.toast .info {
+		font-size: 22px;
+	}
+}
+
+/* ======= COPY TO CLIPBOARD ======== */
+.copyToClipboard {
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+.copyToClipboard:hover {
+	opacity: 0.7;
+}
+
+/* ======= SPINNERS ======== */
+.spinner-border-sm {
+	--phoenix-spinner-width: 1rem;
+	--phoenix-spinner-height: 1rem;
+	--phoenix-spinner-border-width: 0.2em;
+}
+
+.spinner-grow-sm {
+	--phoenix-spinner-width: 1rem;
+	--phoenix-spinner-height: 1rem;
+}
+
+/* ======= MASTERBOT PERSONALISATIONS ======== */
+/* Header avec logo MASTERBOT */
+.navbar-brand {
+	font-weight: bold;
+	background: linear-gradient(135deg, #ff69b4, #ff1493);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent !important;
+}
+
+/* Boutons MASTERBOT */
+.btn-master {
+	background: linear-gradient(135deg, #ff69b4, #ff1493);
+	border: none;
+	color: white;
+	transition: transform 0.2s;
+}
+
+.btn-master:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+	color: white;
+}
+
+/* Cartes dashboard */
+.card-master {
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	transition: transform 0.2s;
+}
+
+.card-master:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Statistiques */
+.stat-number {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #ff69b4;
+}
+
+.stat-label {
+	font-size: 0.9rem;
+	color: #666;
+}
+
+/* Badges */
+.badge-master {
+	background: linear-gradient(135deg, #ff69b4, #ff1493);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 20px;
+	font-size: 0.8rem;
+}
+
+/* Tableaux */
+.table-master {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.table-master thead {
+	background: linear-gradient(135deg, #ff69b4, #ff1493);
+	color: white;
+}
+
+.table-master tbody tr:hover {
+	background-color: rgba(255, 105, 180, 0.05);
+}
+
+/* Footer */
+.footer-master {
+	background: linear-gradient(135deg, #1a1a2e, #16213e);
+	color: white;
+	padding: 20px 0;
+	margin-top: 50px;
+  }
