@@ -1,0 +1,274 @@
+/* 
+MASTERBOT V3 - Phoenix CSS Framework Personnalisé
+Version adaptée aux couleurs MASTERBOT (rose)
+*/
+
+:root,
+:root.light,
+:root .light {
+	--phoenix-gray-soft: #f5f7fa;
+	--phoenix-gray-100: #eff2f6;
+	--phoenix-gray-200: #e3e6ed;
+	--phoenix-gray-300: #cbd0dd;
+	--phoenix-gray-400: #9fa6bc;
+	--phoenix-gray-500: #8a94ad;
+	--phoenix-gray-600: #6e7891;
+	--phoenix-gray-700: #525b75;
+	--phoenix-gray-800: #3e465b;
+	--phoenix-gray-900: #31374a;
+	--phoenix-gray-1000: #222834;
+	--phoenix-gray-1100: #141824;
+	
+	/* MASTERBOT - Couleur primaire rose */
+	--phoenix-primary: #ff69b4;
+	--phoenix-primary-rgb: 255, 105, 180;
+	--phoenix-primary-soft: #fff0f5;
+	--phoenix-primary-100: #ffe4f0;
+	--phoenix-primary-200: #ffc0e0;
+	--phoenix-primary-300: #ff9fd0;
+	--phoenix-primary-500: #ff1493;
+	--phoenix-primary-600: #db0a7a;
+	
+	--phoenix-secondary: #31374a;
+	--phoenix-success: #25b003;
+	--phoenix-info: #0097eb;
+	--phoenix-warning: #e5780b;
+	--phoenix-danger: #ed2000;
+	--phoenix-light: #eff2f6;
+	--phoenix-dark: #141824;
+	--phoenix-white: #fff;
+	--phoenix-black: #000000;
+	
+	--phoenix-body-color: #31374a;
+	--phoenix-body-bg: #f5f7fa;
+	--phoenix-border-color: var(--phoenix-gray-200);
+	--phoenix-border-radius: 0.375rem;
+	
+	--phoenix-font-sans-serif: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--phoenix-navbar-top-height: 4rem;
+	--phoenix-navbar-top-bg-color: #fff;
+	--phoenix-navbar-top-link-color: var(--phoenix-gray-900);
+	--phoenix-navbar-top-link-hover-color: #ff69b4;
+	--phoenix-navbar-vertical-width: 15.875rem;
+	--phoenix-navbar-vertical-bg-color: #fff;
+	--phoenix-navbar-vertical-link-color: #525b75;
+	--phoenix-navbar-vertical-link-hover-color: #ff69b4;
+	--phoenix-navbar-vertical-link-active-color: #ff69b4;
+}
+
+/* MASTERBOT - Badges personnalisés */
+.badge-phoenix-primary {
+	--phoenix-badge-bg: #ffe4f0;
+	--phoenix-badge-color: #db0a7a;
+	--phoenix-badge-border-color: #ffc0e0;
+}
+
+.badge-phoenix-secondary {
+	--phoenix-badge-bg: #e3e6ed;
+	--phoenix-badge-color: #141824;
+	--phoenix-badge-border-color: #cbd0dd;
+}
+
+.badge-phoenix-success {
+	--phoenix-badge-bg: #d9fbd0;
+	--phoenix-badge-color: #1c6c09;
+	--phoenix-badge-border-color: #bee8b4;
+}
+
+.badge-phoenix-warning {
+	--phoenix-badge-bg: #ffefca;
+	--phoenix-badge-color: #bc3803;
+	--phoenix-badge-border-color: #ffcc85;
+}
+
+.badge-phoenix-danger {
+	--phoenix-badge-bg: #ffe0db;
+	--phoenix-badge-color: #b81800;
+	--phoenix-badge-border-color: #fabcb3;
+}
+
+/* MASTERBOT - Boutons */
+.btn-primary {
+	background-color: #ff69b4;
+	border-color: #ff69b4;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #ff1493;
+	border-color: #ff1493;
+}
+
+.btn-outline-primary {
+	color: #ff69b4;
+	border-color: #ff69b4;
+}
+.btn-outline-primary:hover {
+	background-color: #ff69b4;
+	border-color: #ff69b4;
+}
+
+/* MASTERBOT - Liens */
+a {
+	color: #ff69b4;
+}
+a:hover {
+	color: #ff1493;
+}
+
+/* MASTERBOT - Navbar */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+	color: #ff69b4;
+}
+
+/* MASTERBOT - Formulaires */
+.form-control:focus {
+	border-color: #ff69b4;
+	box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+/* MASTERBOT - Sélecteurs */
+.form-select:focus {
+	border-color: #ff69b4;
+	box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+/* MASTERBOT - Pagination */
+.page-link {
+	color: #ff69b4;
+}
+.page-link:hover {
+	color: #ff1493;
+}
+.page-item.active .page-link {
+	background-color: #ff69b4;
+	border-color: #ff69b4;
+}
+
+/* MASTERBOT - Progress bar */
+.progress-bar {
+	background-color: #ff69b4;
+}
+
+/* MASTERBOT - Badges */
+.badge.bg-primary {
+	background-color: #ff69b4 !important;
+}
+
+/* MASTERBOT - Cards */
+.card {
+	border-radius: 0.5rem;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.card-header {
+	background-color: rgba(255, 105, 180, 0.05);
+	border-bottom: 1px solid rgba(255, 105, 180, 0.1);
+}
+
+/* MASTERBOT - Alertes */
+.alert-primary {
+	background-color: rgba(255, 105, 180, 0.1);
+	border-color: rgba(255, 105, 180, 0.2);
+	color: #ff69b4;
+}
+
+/* MASTERBOT - Tableaux */
+.table-primary {
+	background-color: rgba(255, 105, 180, 0.05);
+}
+.table-primary > th,
+.table-primary > td {
+	background-color: rgba(255, 105, 180, 0.05);
+}
+
+/* MASTERBOT - Tabs */
+.nav-tabs .nav-link.active {
+	color: #ff69b4;
+	border-bottom-color: #ff69b4;
+}
+.nav-tabs .nav-link:hover:not(.active) {
+	color: #ff69b4;
+}
+
+/* MASTERBOT - Dropdown */
+.dropdown-item:active {
+	background-color: #ff69b4;
+}
+
+/* MASTERBOT - Spinners */
+.spinner-border.text-primary {
+	color: #ff69b4 !important;
+}
+.spinner-grow.text-primary {
+	color: #ff69b4 !important;
+}
+
+/* MASTERBOT - Scrollbar personnalisée */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: #ff69b4;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #ff1493;
+}
+
+/* Mode sombre MASTERBOT */
+.dark {
+	--phoenix-primary: #ff9fd0;
+	--phoenix-primary-rgb: 255, 159, 208;
+	--phoenix-primary-500: #ff69b4;
+	--phoenix-body-bg: #141824;
+	--phoenix-body-color: #e3e6ed;
+	--phoenix-gray-100: #222834;
+	--phoenix-gray-200: #31374a;
+	--phoenix-gray-300: #373e53;
+	--phoenix-white: #141824;
+	--phoenix-black: #eff2f6;
+}
+
+.dark .card {
+	background-color: #222834;
+	border-color: #31374a;
+}
+
+.dark .form-control,
+.dark .form-select {
+	background-color: #222834;
+	border-color: #31374a;
+	color: #e3e6ed;
+}
+
+.dark .table {
+	color: #e3e6ed;
+}
+
+.dark .dropdown-menu {
+	background-color: #222834;
+	border-color: #31374a;
+}
+
+.dark .modal-content {
+	background-color: #222834;
+}
+
+.dark .toast {
+	background-color: #222834;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	:root {
+		--phoenix-border-radius: 0.25rem;
+	}
+	.card {
+		border-radius: 0.375rem;
+	}
+    }
