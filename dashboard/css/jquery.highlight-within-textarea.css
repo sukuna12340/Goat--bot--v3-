@@ -1,0 +1,168 @@
+/* ============================================ */
+/* MASTERBOT V3 - HIGHLIGHT TEXTAREA           */
+/* Mise en évidence de texte dans les champs   */
+/* ============================================ */
+
+/* Couleurs MASTERBOT pour les marqueurs */
+.hwt-content mark.blue {
+	background-color: rgba(255, 105, 180, 0.3);
+	border-left: 3px solid #ff69b4;
+}
+
+.hwt-content mark.red {
+	background-color: rgba(255, 91, 91, 0.3);
+	border-left: 3px solid #ff5b5b;
+}
+
+.hwt-content mark.green {
+	background-color: rgba(0, 214, 143, 0.3);
+	border-left: 3px solid #00d68f;
+}
+
+.hwt-content mark.yellow {
+	background-color: rgba(255, 159, 67, 0.3);
+	border-left: 3px solid #ff9f43;
+}
+
+.hwt-content mark.purple {
+	background-color: rgba(156, 39, 176, 0.3);
+	border-left: 3px solid #9c27b0;
+}
+
+/* Container principal */
+.hwt-container {
+	width: 100% !important;
+	display: inline-block;
+	position: relative;
+	overflow: hidden !important;
+	-webkit-text-size-adjust: none !important;
+}
+
+/* Backdrop pour les surlignages */
+.hwt-backdrop {
+	position: absolute !important;
+	top: 0 !important;
+	right: -99px !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	padding-right: 99px !important;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+/* Zone de surlignage */
+.hwt-highlights {
+	width: auto !important;
+	height: auto !important;
+	border-color: transparent !important;
+	white-space: pre-wrap !important;
+	word-wrap: break-word !important;
+	color: transparent !important;
+	overflow: hidden !important;
+}
+
+/* Champ de saisie */
+.hwt-input {
+	display: block !important;
+	position: relative !important;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	font: inherit;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+/* Contenu avec surlignage */
+.hwt-content {
+	padding: 12px;
+	border: 2px solid #e9ecef;
+	background: none transparent !important;
+	border-radius: 12px;
+	font-family: 'Josefin Sans', monospace;
+	font-size: 14px;
+	line-height: 1.5;
+	transition: all 0.2s ease;
+}
+
+/* Focus sur le champ */
+.hwt-input:focus + .hwt-content,
+.hwt-content:focus-within {
+	border-color: #ff69b4 !important;
+	box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+	outline: none;
+}
+
+/* Styles pour les marqueurs */
+.hwt-content mark {
+	padding: 2px 0 !important;
+	color: inherit;
+	border-radius: 4px;
+	transition: background 0.2s;
+}
+
+/* Animation au survol des marqueurs */
+.hwt-content mark:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+/* Styles MASTERBOT supplémentaires */
+.hwt-container .hwt-content {
+	background: var(--bs-body-bg, #fff) !important;
+}
+
+.hwt-container .hwt-highlights {
+	background: transparent !important;
+}
+
+/* Mode sombre (si activé) */
+.dark-theme .hwt-content {
+	border-color: #2d2d2d;
+	background: #1a1a2e !important;
+	color: #e0e0e0;
+}
+
+.dark-theme .hwt-content mark.blue {
+	background-color: rgba(255, 105, 180, 0.2);
+}
+
+.dark-theme .hwt-content mark.red {
+	background-color: rgba(255, 91, 91, 0.2);
+}
+
+.dark-theme .hwt-content mark.green {
+	background-color: rgba(0, 214, 143, 0.2);
+}
+
+.dark-theme .hwt-content mark.yellow {
+	background-color: rgba(255, 159, 67, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.hwt-content {
+		padding: 8px;
+		font-size: 13px;
+	}
+}
+
+/* Barre de défilement personnalisée */
+.hwt-backdrop::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.hwt-backdrop::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px;
+}
+
+.hwt-backdrop::-webkit-scrollbar-thumb {
+	background: #ff69b4;
+	border-radius: 10px;
+}
+
+.hwt-backdrop::-webkit-scrollbar-thumb:hover {
+	background: #ff1493;
+  }
